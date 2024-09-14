@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Shadows Into Light', cursive, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: shake 0.3s infinite;
+}
+
+#intro-screen {
+    text-align: center;
+    border: 4px dashed white;
+    padding: 40px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    animation: glitch 1.5s infinite;
+}
+
+h1, .warning-text, .continue-text {
+    animation: text-glitch 3s infinite;
+    text-shadow: 2px 2px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.warning-text {
+    font-size: 1.5rem;
+    color: #ff4040;
+    margin-bottom: 10px;
+}
+
+.continue-text {
+    font-size: 1.2rem;
+}
+
+strong {
+    color: #ffb600;
+}
+
+/* Shaking screen effect */
+@keyframes shake {
+    0% { transform: translate(0px, 0px); }
+    20% { transform: translate(2px, -2px); }
+    40% { transform: translate(-2px, 2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(-2px, -2px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+/* Glitch effect for the text */
+@keyframes text-glitch {
+    0% { opacity: 1; transform: none; }
+    10% { opacity: 0.8; transform: skew(-5deg); }
+    20% { opacity: 0.5; transform: translateX(-5px); }
+    30% { opacity: 1; transform: translateX(5px); }
+    40% { opacity: 0.8; transform: skew(5deg); }
+    50% { opacity: 0.3; transform: none; }
+    60% { opacity: 1; transform: none; }
+    70% { opacity: 0.7; transform: translateX(-5px); }
+    80% { opacity: 0.5; transform: skew(-5deg); }
+    90% { opacity: 0.9; transform: translateX(5px); }
+    100% { opacity: 1; transform: none; }
+}
+
+/* Glitchy effect for the entire intro screen */
+@keyframes glitch {
+    0% { clip-path: inset(0 0 0 0); }
+    10% { clip-path: inset(20% 0 10% 0); }
+    20% { clip-path: inset(0 10% 0 0); }
+    30% { clip-path: inset(10% 0 20% 0); }
+    40% { clip-path: inset(0 0 0 0); }
+    50% { clip-path: inset(10% 0 0 10%); }
+    60% { clip-path: inset(0 0 20% 0); }
+    70% { clip-path: inset(20% 0 0 0); }
+    80% { clip-path: inset(0 10% 0 0); }
+    90% { clip-path: inset(10% 0 0 20%); }
+    100% { clip-path: inset(0 0 0 0); }
+}
+
+/* Fade-out effect */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}

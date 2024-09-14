@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Shadows Into Light', cursive, sans-serif;
+}
+
+#story-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    position: relative;
+}
+
+.story-text {
+    font-size: 2rem;
+    margin: 20px 0;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease;
+}
